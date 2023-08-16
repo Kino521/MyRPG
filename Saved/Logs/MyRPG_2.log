@@ -807,3 +807,24 @@ LogConfig: Setting CVar [[r.setres:1280x720]]
 [2023.08.16-08.58.11:088][  0]LogCollectionManager: Fixed up redirectors for 0 collections in 0.000004 seconds (updated 0 objects)
 [2023.08.16-08.58.11:088][  0]LogContentStreaming: Texture pool size now 1000 MB
 [2023.08.16-08.58.11:249][  2]LogSlate: Took 0.000308 seconds to synchronously load lazily loaded font '../../../Engine/Content/Slate/Fonts/Roboto-Light.ttf' (167K)
+[2023.08.16-09.06.45:192][664]LogStats: FPlatformStackWalk::StackWalkAndDump -  0.088 s
+[2023.08.16-09.06.45:192][664]LogOutputDevice: Error: === Handled ensure: ===
+[2023.08.16-09.06.45:192][664]LogOutputDevice: Error: 
+[2023.08.16-09.06.45:192][664]LogOutputDevice: Error: Ensure condition failed: EnumHasAnyFlags(GetMessageFlags(), EMessageFlags::Reliable) [File:E:/UE_4.27_Source/UnrealEngine-4.27/Engine/Plugins/Messaging/UdpMessaging/Source/UdpMessaging/Private/Transport/UdpMessageSegmenter.cpp] [Line: 191]
+[2023.08.16-09.06.45:192][664]LogOutputDevice: Error: 
+[2023.08.16-09.06.45:192][664]LogOutputDevice: Error: Stack: 
+[2023.08.16-09.06.45:192][664]LogOutputDevice: Error: [Callstack] 0x00007ffddc44f9c9 UE4Editor-UdpMessaging.dll!<lambda_71a165ea51f9b9c70a643ff99bc85ceb>::operator()() [E:\UE_4.27_Source\UnrealEngine-4.27\Engine\Plugins\Messaging\UdpMessaging\Source\UdpMessaging\Private\Transport\UdpMessageSegmenter.cpp:191]
+[2023.08.16-09.06.45:192][664]LogOutputDevice: Error: [Callstack] 0x00007ffddc430b89 UE4Editor-UdpMessaging.dll!FUdpMessageSegmenter::MarkAsAcknowledged() [E:\UE_4.27_Source\UnrealEngine-4.27\Engine\Plugins\Messaging\UdpMessaging\Source\UdpMessaging\Private\Transport\UdpMessageSegmenter.cpp:191]
+[2023.08.16-09.06.45:192][664]LogOutputDevice: Error: [Callstack] 0x00007ffddc43096f UE4Editor-UdpMessaging.dll!FUdpMessageProcessor::FNodeInfo::MarkAcksOnSegmenter() [E:\UE_4.27_Source\UnrealEngine-4.27\Engine\Plugins\Messaging\UdpMessaging\Source\UdpMessaging\Private\Transport\UdpMessageProcessor.h:194]
+[2023.08.16-09.06.45:192][664]LogOutputDevice: Error: [Callstack] 0x00007ffddc430551 UE4Editor-UdpMessaging.dll!FUdpMessageProcessor::FNodeInfo::MarkAcks() [E:\UE_4.27_Source\UnrealEngine-4.27\Engine\Plugins\Messaging\UdpMessaging\Source\UdpMessaging\Private\Transport\UdpMessageProcessor.h:296]
+[2023.08.16-09.06.45:192][664]LogOutputDevice: Error: [Callstack] 0x00007ffddc425275 UE4Editor-UdpMessaging.dll!FUdpMessageProcessor::ConsumeInboundSegments() [E:\UE_4.27_Source\UnrealEngine-4.27\Engine\Plugins\Messaging\UdpMessaging\Source\UdpMessaging\Private\Transport\UdpMessageProcessor.cpp:406]
+[2023.08.16-09.06.45:192][664]LogOutputDevice: Error: [Callstack] 0x00007ffddc439a16 UE4Editor-UdpMessaging.dll!FUdpMessageProcessor::Run() [E:\UE_4.27_Source\UnrealEngine-4.27\Engine\Plugins\Messaging\UdpMessaging\Source\UdpMessaging\Private\Transport\UdpMessageProcessor.cpp:250]
+[2023.08.16-09.06.45:192][664]LogOutputDevice: Error: [Callstack] 0x00007ffe123420db UE4Editor-Core.dll!FRunnableThreadWin::Run() [E:\UE_4.27_Source\UnrealEngine-4.27\Engine\Source\Runtime\Core\Private\Windows\WindowsRunnableThread.cpp:86]
+[2023.08.16-09.06.45:192][664]LogOutputDevice: Error: [Callstack] 0x00007ffe1233a500 UE4Editor-Core.dll!FRunnableThreadWin::GuardedRun() [E:\UE_4.27_Source\UnrealEngine-4.27\Engine\Source\Runtime\Core\Private\Windows\WindowsRunnableThread.cpp:35]
+[2023.08.16-09.06.45:192][664]LogOutputDevice: Error: [Callstack] 0x00007ffe4eae7614 KERNEL32.DLL!UnknownFunction []
+[2023.08.16-09.06.45:193][664]LogOutputDevice: Error: [Callstack] 0x00007ffe50be26b1 ntdll.dll!UnknownFunction []
+[2023.08.16-09.06.45:193][664]LogOutputDevice: Error: 
+[2023.08.16-09.06.45:193][664]LogStats:                SubmitErrorReport -  0.000 s
+[2023.08.16-09.06.45:193][664]LogStats:                    SendNewReport -  0.377 s
+[2023.08.16-09.06.45:193][664]LogStats:             FDebug::EnsureFailed -  0.465 s
+[2023.08.16-09.07.01:574][713]LogUdpMessaging: Warning: FUdpMessageProcessor::UpdateReassemblers Discarding 1/2 of stale message segements from Sender=192.168.1.87:51887, Sequence=0
